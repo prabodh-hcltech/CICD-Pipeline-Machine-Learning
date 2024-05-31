@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import skops.io as sio
 from sklearn.compose import ColumnTransformer
@@ -60,7 +61,14 @@ predictions = pipe.predict(X_test)
 cm = confusion_matrix(y_test, predictions, labels=pipe.classes_)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=pipe.classes_)
 disp.plot()
-plt.savefig("./Results/model_results.png", dpi=120)
+
+# Ensure the results directory exists
+results_dir = "./Results"
+os.makedirs(results_dir, exist_ok=True)
+
+# Save the plot
+plt.savefig(os.path.join(results_dir, "model_results.png"), dpi=120)
+
 
 ## Write metrics to file
 with open("./Results/metrics.txt", "w") as outfile:
