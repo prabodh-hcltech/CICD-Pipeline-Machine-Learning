@@ -1,6 +1,6 @@
 # CICD-for-Machine-Learning
-[![CI](https://github.com/prabodh-hcltech/CICD-for-Machine-Learning/actions/workflows/ci.yml/badge.svg)](https://github.com/prabodh-hcltech/CICD-for-Machine-Learning/actions/workflows/ci.yml)
-[![CD](https://github.com/prabodh-hcltech/CICD-for-Machine-Learning/actions/workflows/cd.yml/badge.svg)](https://github.com/prabodh-hcltech/CICD-for-Machine-Learning/actions/workflows/cd.yml)
+[![CI](https://github.com/prabodh-hcltech/CICD-Pipeline-Machine-Learning/actions/workflows/ci.yml/badge.svg)](https://github.com/prabodh-hcltech/CICD-Pipeline-Machine-Learning/actions/workflows/ci.yml)
+[![CD](https://github.com/prabodh-hcltech/CICD-Pipeline-Machine-Learning/actions/workflows/cd.yml/badge.svg)](https://github.com/prabodh-hcltech/CICD-Pipeline-Machine-Learning/actions/workflows/cd.yml)
 ## Results
 | Model                  | Accuracy | F1 Score |
 |------------------------|----------|----------|
