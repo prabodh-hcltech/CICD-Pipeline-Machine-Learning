@@ -27,12 +27,14 @@ hf-login:
 	pip install -U "huggingface_hub[cli]"
 	# Fetch latest changes and ensure we are on the correct branch
 	git fetch origin
-	git pull origin
+	git pull origin 
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
-push-hub:
+push-hub: 
 	huggingface-cli upload prabodh-hcltech/Drug-Classification ./App --repo-type=space --commit-message="Sync App files"
 	huggingface-cli upload prabodh-hcltech/Drug-Classification ./Model /Model --repo-type=space --commit-message="Sync Model"
 	huggingface-cli upload prabodh-hcltech/Drug-Classification ./Results /Metrics --repo-type=space --commit-message="Sync Model"
 
 deploy: hf-login push-hub
+
+all: install format train eval update-branch deploy
